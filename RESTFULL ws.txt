@@ -1,0 +1,46 @@
+ 1. Click on Window menu and click on Projects, Files & Services to open it. 
+2. Right click on Java DB and then click on Start Server to start the server.
+ 3. NowexpandJavaDBandright click on sample and then click on connect to
+ connect the sample database with server.
+ 
+ 4. Nowcreate a webapplication with the name CRUD_Operation. A window will
+ openlike following pic.
+ 5. Create an entity class. Right click on project name-> New-> Entity Class.
+ 6. Awindowwill appearlike bellow pic. Enter following data and click on Next ….
+ Class Name-> seller
+ Package Name->com.kk
+ 7. Click on Finish.
+ 8. Right click on project name and create JSF Pages from Entity Classes.
+ Right click on project name-> New-> JSF Pages from Entity Classes
+ 9. Select com.kk.seller and click on Add button and then Next button on below.
+
+ 10. A windowlike below will appear on the screen. Enter the data into that
+ windowasentered in below pic andclickon Next button.
+ 11. Nowclick on Finish.
+ 
+ 12. Right click on project name and create RESTful Web Services from Entity
+ Classes.
+ Right click on project name-> New-> RESTful Web Services from Entity
+ Classes
+ 13. Repeat step 9 and then it will go on next page. Then enter the com.kk.service
+ in Resource Package and then click on Finish button.
+ 14. Nowopenseller.java file under com.kk package.
+ 15. In this file at line number 24, do the right click and select Insert Code.
+ 16. A newlist will appear. Click on Add Property.
+ 17. A newwindowwill open. Enter name as firstName. Make sure name should
+ be exact same as of mine and then click on OK button. Actually we are setting
+ getter and setter method for firstName.
+ 18. Nowright click on web application name and Deploy it.
+ 
+ 19. Nowright click on project name and run it.
+ 20. Awindowwill openin browser like below….
+ 21. Nowclick on ShowAll sellers Items for CRUD operation.
+ 
+ 22. As I have added three data into database. You can add more data by click on
+ Create New seller and can view, edit and delete by click on View, Edit and
+ Destroy option.
+ 23. Adding one moredata into database for demo. Just click on Create New seller.
+ Enter a nameinto FirstName andid into Id. Now click on Saveoption to save
+ the data.
+ 24. Nowclick on ShowAll seller Items to view all records whether our data is
+ entered or not. We can see that one moreShivendra name is appearing.

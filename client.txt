@@ -1,0 +1,85 @@
+ 1. OpenVisual Studio IDE and click on File.
+ File-> New-> Project
+ 2. Click on Web.
+ 
+ 3. Select ASP.NET Web Application and give Name as Service. After that click
+ on OKbutton.
+ 4. Select Empty and click on OK button.
+ 5. Nowyoucansee,onright side in Solution Explorer Service project is created.
+ 6. Right click on Service-> Add-> New Item.
+ 7. Search for WebService.
+  8. Select WebService and give Nameas Operation. After then click on Add
+ button.
+ 9. After click on Add button, Operaion.asmx.cs file will be automatically open
+ otherwise open it from Solution Explorer and Add the following code into
+ Class Operation.
+ [WebMethod]
+ public double Add(double a, double b)
+ {
+ double sum= a+b;
+ return sum;
+ }
+ [WebMethod]
+ public double Multi(double a, double b)
+ {
+ double sum= a*b;
+ return s
+ }
+ 
+ After that press Ctrl+S to save the methods. Actually we are creating two
+ methods for WebService. One is for addition of two numbers and second
+ one is for multiplication of two numbers.
+ 10. Nowrun the project by click on Green arrow button below the Window
+ menu.
+ 11. A window will openin browser and that is our web service.
+ 12. Youcan check services by click on Add or Multi option. But we don’t need
+ this.
+ 13. Nowclick on Service Description option.
+ 
+ 14. Now anewwindowwill open. Select the link and copy it. We will use this
+ link in NetBeans to consume these services.
+ 15. Don’t close Visual Studio and browser, just minimize it otherwise server
+ will stop. But save the link anywhere, so that we can use it later.
+ 16. NowopenNetBeans.
+ 17. Create a WebApplication with nameServiceClient. Next-> Finish.
+ https://E-next.in
+MaheshGurunani
+ 18. Nowcreatea WebService Client.
+ Right click on ServiceClient-> New-> Other.
+
+ 19. Nowselect WebServices in Categories section.
+ 20. Select Web Service Client in File Types and Click on Next button.
+  21. Select WSDL URL and paste the link that you have copied from browser on
+ run of Visual Studio enter package name com.dd. After that click on Finish
+ button.
+
+ 22. As you can see, we got both the service methods i.e. Add & Multi. But in this
+ practical I’m going to use only one service method. You can do for both also.
+ 23.Now create a JSP page. Right click on ServiceClient-> New-> Other
+  24. Select Web in Categories section-> Select JSP and click on Next button.
+ 25. Enter File Name Add andclick on Finish button.
+ 26. In Add.jsp file delete the selected part in body tag, because we don’t need
+ this.
+ 27. Right click between body tag and select Call Web Service Operation.
+  28. Expand andselect Add. After select, click on OK button.
+ 29. Nowaddthefollowing code outside oftry block.
+ doublenum1=Double.parseDouble(request.getParameter("txt1"));
+ doublenum2=Double.parseDouble(request.getParameter("txt2"));
+
+ 30. Now pass num1&num2toa&bvariablerespectively. After that press
+ Ctrl+S to save this code.
+ 31. Nowopenindex.html file of ServiceClient project and replace the contents
+ of body tag with following code. After that press Ctrl+S to save it.
+ 
+ <form>
+ <input type="text" name="txt1" placeholder="Enter First
+ Number"><br><br>
+ <input type="text" name="txt2" placeholder="Enter Second
+ Number"><br><br>
+ <input type="submit" formaction="Add.jsp" value="Add Numbers">
+ </form>
+ 32. NowruntheServerClient web application.
+  33. A windowwill openin browser as below.
+ 34. Now enter two numbers andclick on AddNumbersbutton. Wait toget
+ result……..
+ You will get result on a new page.

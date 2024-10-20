@@ -1,0 +1,86 @@
+ 1. Click on Window menu and click on Projects, Files & Services to open it.
+ 2. Right click on Java DB and then click on Start Server to start the server.
+ 3. NowexpandJavaDBandright click on sample and then click on connect to
+ connect the sample database with server.
+ 
+ 4. Nowwearegoingtocreate a table in default database sample.
+ Right click on Table-> Create Table
+ 5. Give table name as FRIENDS.
+ 6. Nowclick onAddcolumn button toaddcolumns intable.
+ Enter details as in below pic and select Primary key. After that click on OK
+ button.
+ 7. Nowaddsecond column withfollowing detail. But don’t select primary and
+ click on OK button.
+ 
+ 8. Nowclick onOKbutton.
+ 9. NowyoucanseeatablewithnameFRIENDSinthe table.
+ 10. Right click on FRIENDS to view and add records into it.
+ 11. Nowclick on the leftmost icon in second panel to insert somerecord.
+ 12. Insert a record and then click on Add Row button to insert more record.
+ After that click on OK button to finish.
+ 13.As you can see, I have entered 7 records.
+ 14. Nowcreate a webapplication with name Server. After that click on Next and
+ then Finish button.
+ 15. Nowcreate aRESTful Web Service from Database byright click on project
+ name.
+ 16. Choose Data Source jdbc/sample.
+
+ 17. Nowselect FRIENDS and click on Add button. After that click on Next button.
+ 
+ 18. Enter Package name as com.kk andclick on Next button and then Finish.
+ 19. Nowopenselected file by double click on it.
+ 
+ 20.Now remove the selected part from every method in this file. So that it will
+ communicate only in JSON format. You can also use methods to convert it. But
+ this is easiest method.
+ 21. After that right click on project name and Deploy it.
+ 22. Nowcreate one more WebApplication as Client. After that click on Next and
+ then Finish button.
+ 23. Nowopentheindex.html file of Client project and add the following code in
+ betweenHEADtag.
+ <style>
+ table {
+ font-family: arial, sans-serif;
+ border-collapse: collapse;
+ }
+ td, th {
+ border: 1px solid #000000;
+ text-align: center; padding:
+ 8px;
+ }
+ </style>
+ <script>
+ var request = new XMLHttpRequest();
+ request.open('GET',
+ 'http://localhost:8080/Server/webresources/com.kk.friends/', true);
+ request.onload = function () {
+ // begin accessing JSON data here
+ var data =JSON.parse(this.response);
+ 
+ for (var i = 0; i < data.length; i++) {
+ var table = document.getElementById("myTable");
+ var row=table.insertRow();
+ var cell1 = row.insertCell(0);
+ var cell2 = row.insertCell(1);
+ cell1.innerHTML = data[i].id;
+ cell2.innerHTML = data[i].firstname;
+ }
+ };
+ request.send();
+ </script>
+ 
+ URL in the red font is sensitive. It will change accordingly if you have not given
+ the project and file names as of mine.
+
+
+ 24. Replace the content of body tag with following code.
+ <table id="myTable">
+ <tr>
+ <th> ID</th>
+ <th>NAME</th>
+ </tr>
+ </table>
+ 25. Nowrun the Client Web Application.
+ 
+ 26. A windowwill open in browser which represents a data in tabular format.
+ These data are the records entered in FRIEND table.
